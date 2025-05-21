@@ -12,8 +12,8 @@ header {
 
 header img {
     padding-left: 25px;
-    max-width: 5%;
-    max-height: 5%;
+    max-width: 110px;
+    max-height: 110px;
 }
 
 header h1 {
@@ -67,7 +67,7 @@ header a img {
 }
 
 .bar_buttons button:hover, header a:hover {
-    color: #ff2929;
+    color: #295bff;
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     transform: translateY(-2px);
@@ -242,7 +242,7 @@ a.mail:hover::after {
 
 
 body {
-    background-image: url(img/background.png);
+    background-image: url(img/background.jpg);
     background-attachment: fixed;
     position: relative;
     overflow-x: hidden;
@@ -263,3 +263,12 @@ body::before {
 
 }
 
+.uefn {
+    display: block;
+    width: 80%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    border-radius: 10px;
+}
