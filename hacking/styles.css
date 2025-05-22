@@ -24,7 +24,7 @@ header h1 {
 }
 
 body {
-    background-color: #ff3636;
+    background-color: #015508;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -67,7 +67,7 @@ header a img {
 }
 
 .bar_buttons button:hover, header a:hover {
-    color: #ff2929;
+    color: #088b13;
     background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     transform: translateY(-2px);
@@ -118,7 +118,7 @@ header a img {
 
 .content h1 {
     font-size: 32px;
-    color: #ff2929;
+    color: #088b13;
     margin-bottom: 20px;
 
     padding-bottom: 10px;
@@ -132,7 +132,7 @@ header a img {
     left: 0;
     width: 80px; /* Width of the accent line */
     height: 4px;
-    background-color: #ff2929;
+    background-color: #088b13;
     border-radius: 2px;
 }
 
@@ -182,27 +182,7 @@ header a img {
 
 .content img.portrait {
     max-width: 200px;
-    max-height: 300px; /* Adding a max-height */
-    display: block;
-    margin: 50px auto; /* Increased from 15px to 30px */
-    object-fit: cover; /* Ensures the image fills the container without being cropped */
-    width: auto; /* Allow width to adjust proportionally */
-    height: auto; /* Allow height to adjust proportionally */
-    border: 10px solidrgba(255, 54, 54, 0)6;
-    border-radius: 8px;
-}
-
-/* Portrait container for additional styling */
-.portrait-container {
-    display: flex;
-    justify-content: center; /* Centers the image horizontally */
-    width: 100%;
-    margin: 30px 0; /* Increased from 15px to 30px */
-}
-
-/* If you want to use the portrait container with text */
-.portrait-container img.portrait {
-    margin: 0; /* Remove margin if used inside the container */
+    margin: 20px auto;
 }
 
 /* Footer styles */
@@ -258,4 +238,95 @@ a.mail::after {
 a.mail:hover::after {
     visibility: visible;
     width: 100%;
+}
+
+
+body {
+    background-image: url(img/background.png);
+    background-attachment: fixed;
+    position: relative;
+    overflow-x: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* Blue tint overlay with blur */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+.uefn {
+    display: block;
+    width: 80%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    border-radius: 10px;
+}
+
+/* Discord button style */
+.discord {
+    background-color: #5865F2;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    border: none;
+    box-shadow: 0 2px 10px rgba(88, 101, 242, 0.4);
+    position: relative;
+
+}
+
+.discord:hover {
+    background-color: #4752c4;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(88, 101, 242, 0.5);
+}
+
+.discord:active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 5px rgba(88, 101, 242, 0.3);
+}
+
+/* Discord button animation */
+.discord::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%, -50%);
+    transform-origin: 50% 50%;
+}
+
+.discord:hover::after {
+    animation: discord-ripple 1s ease-out;
+}
+
+@keyframes discord-ripple {
+    0% {
+        transform: scale(0, 0);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(20, 20);
+        opacity: 0;
+    }
 }
